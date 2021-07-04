@@ -3,11 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ChartsComponent } from './components/charts/charts.component'; // import ChartsComponent to use charts
 
 const routes: Routes = [
   {
     path: '',
     component: ProductListComponent
+  },
+  {
+    path: 'charts',
+    component: ChartsComponent
   },
   {
     path: 'product',

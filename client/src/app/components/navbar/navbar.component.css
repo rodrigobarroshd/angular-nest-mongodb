@@ -1,0 +1,36 @@
+:host .navbar{
+    background-color: rgba(0,0,0,0.8) !important;
+    font-size: 15px;
+    /* height: 100px; */
+
+  }
+  .navbar-brand{
+    color: whitesmoke;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px; 
+
+  }
+  .navbar-nav .nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: whitesmoke;
+    font-size: 15px;
+    
+}
+.navbar-dark .nav-item.active .nav-link,
+.navbar-dark .nav-item:focus .nav-link,
+.navbar-dark .nav-item:hover .nav-link {
+    color: whitesmoke;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.navbar-brand:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+

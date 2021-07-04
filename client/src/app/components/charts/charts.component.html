@@ -1,0 +1,51 @@
+<div style="display: block" *ngIf="barChartData">
+  <canvas baseChart 
+    height="30px" 
+    width="100px"
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType"
+    [colors]="chartColors">
+  </canvas>
+</div>
+
+
+<!-- Add Product List -->
+<div *ngFor="let product of products" class="card card-body mb-2">
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <!-- <li>
+          id: {{product._id}}
+        </li> -->
+        <li>
+          name1: {{product.name1}}
+        </li>
+        <li>
+          name2: {{product.name2}}
+        </li>
+        <li>
+          name3: {{product.name3}}
+        </li>
+        <li>
+          name4: {{product.name4}}
+        </li>
+        <li>
+          name5: {{product.name5}}
+        </li>
+        <li>
+          name6: {{product.name6}}
+        </li>
+        <li>
+          name7: {{product.name7}}
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="col-md-4">
+      <img [src]="product.imageURL" class="card-img">
+    </div> -->
+  </div>
+</div>
