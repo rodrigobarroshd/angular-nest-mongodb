@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm-4 offset-sm-4">
+    <div class="card card-body">
+
+      <form (submit)="edit ? updateProduct() : submitProduct()">
+
+        <div class="form-group">
+          <input type="text" name="1" [(ngModel)]="product.name1" class="form-control" placeholder="Pressao arterial sistólica (mmHg)" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="2" [(ngModel)]="product.name2" class="form-control" placeholder="Pressao arterial diastolica (mmHg)">
+        </div>
+        <div class="form-group">
+          <input type="text" name="3" [(ngModel)]="product.name3" class="form-control" placeholder="Pulso (bpm)">
+        </div>
+        <div class="form-group">
+          <input type="text" name="4" [(ngModel)]="product.name4" class="form-control" placeholder="Peso (kg)">
+        </div>
+        <div class="form-group">
+          <input type="text" name="5" [(ngModel)]="product.name5" class="form-control" placeholder="Altura (cm)">
+        </div>
+        <div class="form-group">
+          <input type="text" name="6" [(ngModel)]="product.name6" class="form-control" placeholder="IMC">
+        </div>
+        <div class="form-group">
+          <input type="text" name="7" [(ngModel)]="product.name7" class="form-control" placeholder="Classificação de Hipertensao arterial">
+        </div>
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
