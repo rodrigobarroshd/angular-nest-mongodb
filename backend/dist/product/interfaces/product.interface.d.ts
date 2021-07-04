@@ -1,11 +1,11 @@
 import { Document } from "mongoose";
 export interface Product extends Document {
-    readonly name1: number;
-    readonly name2: number;
-    readonly name3: number;
-    readonly name4: number;
-    readonly name5: number;
-    readonly name6: number;
-    readonly name7: number;
+    readonly arterial_sistolica: number;
+    readonly arterial_diastolica: number;
+    readonly pulso: number;
+    readonly peso: number;
+    readonly altura: number;
+    readonly imc: number;
+    readonly charterial: number;
     readonly createdAt: Date;
 }

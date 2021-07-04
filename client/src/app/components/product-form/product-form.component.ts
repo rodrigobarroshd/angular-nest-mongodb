@@ -11,13 +11,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProductFormComponent implements OnInit {
 
   product: Product = {
-    name1: 0,
-    name2: 0,
-    name3: 0,
-    name4: 0,
-    name5: 0,
-    name6: 0,
-    name7: 0
+    arterial_sistolica: 0,
+    arterial_diastolica: 0,
+    pulso: 0,
+    peso: 0,
+    altura: 0,
+    imc: 0,
+    charterial: 0
   };
   edit: boolean = false;
 

@@ -25,17 +25,18 @@ export class ChartsComponent implements OnInit {
     }
   };
 
-  public barChartLabels: Label[];
-
-  // Tipo de grafico: line, bar, radar
+  
+// Tipo de grafico: line, bar, radar
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
+  
   public barChartData: ChartDataSets[];
+  public barChartLabels: Label[];
 
   private data_label = [];
   private dato = [];
-  private data_name2 = [];
-  private data_name3 = [];
+  private data_arterial_diastolica = [];
+  private data_pulso = [];
 
   constructor(protected productService: ProductService, private route: ProductService) {  }
   products: Product[];
@@ -58,23 +59,23 @@ export class ChartsComponent implements OnInit {
     this.productService.getProducts().subscribe(res => {
       this.dato = res;
       for (const index in this.dato) {
-        this.data_label.push(this.dato[index].name1);
-        this.data_name2.push(this.dato[index].name2);
-        this.data_name3.push(this.dato[index].name3);
+        this.data_label.push(this.dato[index].arterial_sistolica);
+        this.data_arterial_diastolica.push(this.dato[index].arterial_diastolica);
+        this.data_pulso.push(this.dato[index].pulso);
       }
-      this.cargarDatos(this.data_name2, this.data_name3, this.data_label);
+      this.cargarDatos(this.data_arterial_diastolica, this.data_pulso, this.data_label);
     });
   }
         
-  cargarDatos(data_name2, data_name3 , data_label) {
+  cargarDatos(data_arterial_diastolica, data_pulso , data_label) {
     this.barChartData = [];
     this.barChartLabels = [];
 
     this.barChartData.push(
-      {data: data_name2, label: 'Informe de Dados A'},
-      {data: data_name3, label: 'Informe de Dados B'}
+      {data: data_arterial_diastolica, label: 'Informe de Dados A'},
+      {data: data_pulso, label: 'Informe de Dados B'}
     )
 
-    for (const index in data_name2) {this.barChartLabels.push(data_label[index]);}
+    for (const index in data_arterial_diastolica) {this.barChartLabels.push(data_label[index]);}
   }
 }

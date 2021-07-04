@@ -1,12 +1,12 @@
 export interface Product {
     _id?: string;
-    name1: number;
-    name2: number;
-    name3: number;
-    name4: number;
-    name5: number;
-    name6: number;
-    name7: number;
+    arterial_sistolica: number;
+    arterial_diastolica: number;
+    pulso: number;
+    peso: number;
+    altura: number;
+    imc: number;
+    charterial: number;
 
     createdAt?: Date;
 }
