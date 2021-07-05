@@ -7,4 +7,5 @@ export declare class CreateProductDTO {
     readonly altura: number;
     readonly imc: number;
     readonly charterial: number;
+    readonly imageURL : string;
 }

@@ -9,6 +9,7 @@ exports.ProductSchema = new mongoose_1.Schema({
     altura: Number,
     imc: Number,
     charterial: Number,   
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    imageURL : string
 });
 //# sourceMappingURL=product.schema.js.map

@@ -7,6 +7,7 @@ export interface Product {
     altura: number;
     imc: number;
     charterial: number;
+    imageURL: string;
 
     createdAt?: Date;
 }

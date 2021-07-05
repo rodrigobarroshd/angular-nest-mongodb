@@ -8,4 +8,5 @@ export interface Product extends Document {
     readonly imc: number;
     readonly charterial: number;
     readonly createdAt: Date;
+    readonly imageURL : string;
 }

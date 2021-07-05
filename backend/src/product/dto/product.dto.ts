@@ -7,4 +7,5 @@ export class CreateProductDTO {
     readonly number6: number;
     readonly number7: number;
     readonly createdAt: Date;
+    readonly imageURL : string;
 }

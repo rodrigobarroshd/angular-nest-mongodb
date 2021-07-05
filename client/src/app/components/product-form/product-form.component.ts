@@ -17,7 +17,8 @@ export class ProductFormComponent implements OnInit {
     peso: 0[''],
     altura: 0[''],
     imc: 0[''],
-    charterial: 0['']
+    charterial: 0[''],
+    imageURL: ''
   };
   edit: boolean = false;
 
@@ -25,7 +26,19 @@ export class ProductFormComponent implements OnInit {
     private productService: ProductService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) { }
+  ) { 
+      let imageURL = '';
+      let now = new Date
+      let hour = now.getHours()
+      
+      if (hour > 5 && hour < 18 ) { // Dia
+        imageURL = 'https://cdn.icon-icons.com/icons2/33/PNG/256/sunny_sunshine_weather_2778.png';
+      } else { // Noite
+        imageURL = 'https://cdn.icon-icons.com/icons2/2035/PNG/256/weather_half_moon_stars_night_icon_124157.png';
+      }
+      // Salvando alteração
+      this.product.imageURL=(imageURL);
+  }
 
   ngOnInit() {
     const params = this.activatedRoute.snapshot.params;

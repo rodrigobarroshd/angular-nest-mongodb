@@ -41,6 +41,7 @@ export class ChartsComponent implements OnInit {
   private data_altura = [];
   private data_imc = [];
   private data_charterial = [];
+  private data_imageurl = [];
 
   private days = [];
   private day = 0; // Var temp to sum
