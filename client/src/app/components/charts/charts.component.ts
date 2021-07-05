@@ -134,6 +134,8 @@ export class ChartsComponent implements OnInit {
   private dato = [];
   private data_arterial_sistolica = [];
   private data_arterial_diastolica = [];
+  private days = [];
+  private day = 0; // Var temp to sum
 
   constructor(protected productService: ProductService, private route: ProductService) {  }
   products: Product[];
@@ -159,12 +161,15 @@ export class ChartsComponent implements OnInit {
         this.data_label.push(this.dato[index].arterial_sistolica);
         this.data_arterial_sistolica.push(this.dato[index].arterial_sistolica);
         this.data_arterial_diastolica.push(this.dato[index].arterial_diastolica);
+        
+        this.day++;
+        this.days[index] = ("Dia "+this.day);
       }
-      this.cargarDatos(this.data_arterial_sistolica, this.data_arterial_diastolica, this.data_label);
+      this.cargarDatos(this.data_arterial_sistolica, this.data_arterial_diastolica, this.days);
     });
   }
         
-  cargarDatos(data_arterial_sistolica, data_arterial_diastolica , data_label) {
+  cargarDatos(data_arterial_sistolica, data_arterial_diastolica , days) {
     this.barChartData = [];
     this.barChartLabels = [];
 
@@ -172,7 +177,8 @@ export class ChartsComponent implements OnInit {
       {data: data_arterial_sistolica, label: 'Pressão Arterial Siastólica'},
       {data: data_arterial_diastolica, label: 'Pressão Arterial Diastólica'},
     )
-
-    for (const index in data_arterial_sistolica) {this.barChartLabels.push("");}
+    
+    // traversing the array to add days
+    for (const index in days) {this.barChartLabels.push(days[index]);}
   }
 }
