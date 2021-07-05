@@ -70,16 +70,20 @@ export class ChartsComponent implements OnInit {
         this.data_arterial_sistolica.push(this.dato[index].arterial_sistolica);
         this.data_arterial_diastolica.push(this.dato[index].arterial_diastolica);
         this.data_pulso.push(this.dato[index].pulso);
+        this.data_peso.push(this.dato[index].peso);
+        this.data_altura.push(this.dato[index].altura);
+        this.data_imc.push(this.dato[index].imc);
+        this.data_charterial.push(this.dato[index].charterial);
 
 
         this.day++;
         this.days[index] = ("Dia "+this.day);
       }
-      this.cargarDatos(this.data_arterial_sistolica, this.data_arterial_diastolica, this.data_pulso, this.days);
+      this.cargarDatos(this.data_charterial,this.data_imc,this.data_altura, this.data_arterial_sistolica,this.data_peso, this.data_arterial_diastolica, this.data_pulso, this.days);
     });
   }
         
-  cargarDatos(data_arterial_sistolica, data_arterial_diastolica, data_pulso, days) {
+  cargarDatos(data_charterial,data_imc, data_altura, data_arterial_sistolica, data_peso, data_arterial_diastolica, data_pulso, days) {
     this.barChartData = [];
     this.barChartLabels = [];
 
@@ -87,10 +91,10 @@ export class ChartsComponent implements OnInit {
       {data: data_arterial_sistolica, label: 'Pressão Arterial Siastólica'},
       {data: data_arterial_diastolica, label: 'Pressão Arterial Diastólica'},
       {data: data_pulso, label: 'Pulso'},
-      {data: data_pulso, label: 'Informe de Dados B'},
-      {data: data_pulso, label: 'Informe de Dados B'},
-      {data: data_pulso, label: 'Informe de Dados B'},
-      {data: data_pulso, label: 'Hipertensão arterial'}
+      {data: data_peso, label: 'Peso (kg)'},
+      {data: data_altura, label: 'Altura'},
+      {data: data_imc, label: 'IMC'},
+      {data: data_charterial, label: 'Hipertensão arterial'}
     )
     
     // traversing the array to add days
