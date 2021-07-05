@@ -1,5 +1,17 @@
 .card-body{
     width:350px;
     margin: 10px;
-    float: left;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 auto;
+    border-color: whitesmoke;
+    background-color:rgba(0,0,0,0.8);
+    
+}
+.col-md-8 ul{
+    list-style-type: square;
+    color: whitesmoke;
+}
+.col-md-8 p{
+    text-align: center;
 }

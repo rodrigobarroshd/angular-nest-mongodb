@@ -8,7 +8,8 @@ export const ProductSchema = new Schema({
     altura: Number,
     imc: Number,
     charterial: Number,
-    createdAt: { type: Date, default: Date.now },
+    // createdAt: { type: Date, default: Date.now },
+    createdAt: String,
     imageURL: String
 });
 

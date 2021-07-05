@@ -6,6 +6,7 @@ export class CreateProductDTO {
     readonly number5: number;
     readonly number6: number;
     readonly number7: number;
-    readonly createdAt: Date;
-    readonly imageURL : string;
+    // readonly createdAt: Date;
+    readonly createdAt: string;
+    readonly imageURL: string;
 }

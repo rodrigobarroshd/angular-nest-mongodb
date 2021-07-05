@@ -8,8 +8,9 @@ exports.ProductSchema = new mongoose_1.Schema({
     peso: Number,
     altura: Number,
     imc: Number,
-    charterial: Number,   
-    createdAt: { type: Date, default: Date.now },
-    imageURL : string
+    charterial: Number,
+    // createdAt: { type: Date, default: Date.now },
+    createdAt: string,
+    imageURL: string
 });
 //# sourceMappingURL=product.schema.js.map

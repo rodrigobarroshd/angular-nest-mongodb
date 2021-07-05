@@ -8,7 +8,7 @@ export interface Product extends Document {
     readonly altura: number;
     readonly imc: number;
     readonly charterial: number;
-    readonly imageURL : string;
-
-    readonly createdAt: Date;
+    readonly imageURL: string;
+    readonly createdAt: string;
+    // readonly createdAt: Date;
 }

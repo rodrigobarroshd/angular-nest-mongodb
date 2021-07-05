@@ -8,6 +8,6 @@ export interface Product {
     imc: number;
     charterial: number;
     imageURL: string;
-
-    createdAt?: Date;
+    createdAt?: string;
+    // createdAt?: Date;
 }

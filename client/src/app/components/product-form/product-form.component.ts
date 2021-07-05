@@ -18,7 +18,8 @@ export class ProductFormComponent implements OnInit {
     altura: 0[''],
     imc: 0[''],
     charterial: 0[''],
-    imageURL: ''
+    imageURL: '',
+    createdAt: ''
   };
   edit: boolean = false;
 
@@ -38,6 +39,7 @@ export class ProductFormComponent implements OnInit {
       }
       // Salvando alteração
       this.product.imageURL=(imageURL);
+      this.product.createdAt = "" + now.getHours() + ":" + now.getMinutes() + ", " + now.toDateString();
   }
 
   ngOnInit() {

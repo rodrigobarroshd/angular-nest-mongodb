@@ -12,16 +12,12 @@
   </canvas>
 </div>
 
-
 <!-- Add Product List -->
 <div *ngFor="let product of products" class="card card-body mb-2">
   <div class="row">
     <div class="col-md-8">
       <ul>
-        <!-- <li>
-          id: {{product._id}}
-        </li> -->
-        <p>Dados médicos</p>
+        <p>Dados médicos <br> {{product.createdAt}}</p>
         <li>
           Arterial sistolica: {{product.arterial_sistolica}}
         </li>
