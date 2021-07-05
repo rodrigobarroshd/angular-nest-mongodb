@@ -43,9 +43,7 @@ export class ChartsComponent implements OnInit {
   private data_imc = [];
   private data_charterial = [];
   private data_imageurl = [];
-
   private days = [];
-  private day = 0; // Var temp to sum
 
   constructor(protected productService: ProductService, private route: ProductService) { }
   products: Product[];
@@ -76,9 +74,8 @@ export class ChartsComponent implements OnInit {
         this.data_altura.push(this.dato[index].altura);
         this.data_imc.push(this.dato[index].imc);
         this.data_charterial.push(this.dato[index].charterial);
-
-        this.day++;
-        this.days[index] = ("Dia " + this.day + " : " + this.dato[index].createdAt);
+        
+        this.days[index] = (this.dato[index].createdAt);
       }
       this.cargarDatos(this.data_charterial, this.data_imc, this.data_altura, this.data_arterial_sistolica, this.data_peso, this.data_arterial_diastolica, this.data_pulso, this.days);
     });

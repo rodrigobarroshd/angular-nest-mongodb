@@ -1,7 +1,5 @@
 <div style="display: block" *ngIf="barChartData">
-  <canvas baseChart 
-    height="30px" 
-    width="100px"
+  <canvas baseChart
     [datasets]="barChartData"
     [labels]="barChartLabels"
     [options]="barChartOptions"
