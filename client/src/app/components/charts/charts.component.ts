@@ -27,8 +27,8 @@ export class ChartsComponent implements OnInit {
 
   public barChartLabels: Label[];
 
-  // Tipo de grafico: line, bar, radar
-  public barChartType: ChartType = 'bar';
+  // Tipo de graficos: line, bar, radar, horizontalBar
+  public barChartType: ChartType = 'horizontalBar';
   public barChartLegend = true;
   public barChartData: ChartDataSets[];
 
