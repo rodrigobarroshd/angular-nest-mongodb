@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 
-// import { ChartsModule } from 'ng2-charts' // import module charts
+import { ChartsModule } from 'ng2-charts' // import module charts
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

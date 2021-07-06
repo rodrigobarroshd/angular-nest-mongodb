@@ -1,3 +1,21 @@
 <p>
   charts works!
 </p>
+<ion-content padding>
+  <div class="row">
+    <div class="col-md-6">
+      <div style="display: block" *ngIf="barChartData">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          [colors]="chartColors">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

@@ -1,3 +1,12 @@
-<p>
-  product-form works!
-</p>
+<form (submit)="edit ? updateProduct() : submitProduct()">
+  <!-- Number type input -->
+  <ion-input type="text" name="1" [(ngModel)]="product.arterial_sistolica" class="form-control" placeholder="Pressao arterial sistólica (mmHg)" autofocus></ion-input>
+  <ion-input type="text" name="2" [(ngModel)]="product.arterial_diastolica" class="form-control" placeholder="Pressao arterial diastolica (mmHg)"></ion-input>
+  <ion-input type="text" name="3" [(ngModel)]="product.pulso" class="form-control" placeholder="Pulso (bpm)"></ion-input>
+  <ion-input type="text" name="4" [(ngModel)]="product.peso" class="form-control" placeholder="Peso (kg)"></ion-input>
+  <ion-input type="text" name="5" [(ngModel)]="product.altura" class="form-control" placeholder="Altura (cm)"></ion-input>
+  <ion-input type="text" name="6" [(ngModel)]="product.imc" class="form-control" placeholder="IMC"></ion-input>
+  <ion-input type="text" name="7" [(ngModel)]="product.charterial" class="form-control" placeholder="Classificação de Hipertensao arterial"></ion-input>
+  
+  <ion-button type="submit" color="primary" expand="block">Save</ion-button>
+</form>
