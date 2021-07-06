@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       product-list works!
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -12,3 +12,23 @@
       <ion-title size="large">product-list works!</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let product of products">
+        <ion-label>
+          <h2>Dados médicos <br></h2>
+          <p>Arterial sistolica: {{product.arterial_sistolica}}</p>
+          <p>Arterial diastolica: {{product.arterial_diastolica}}</p>
+          <p>Pulso: {{product.pulso}}</p>
+          <p>Peso: {{product.peso}}</p>
+          <p>Altura: {{product.altura}}</p>
+          <p>Imc: {{product.imc}}</p>
+          <p>Hipertensão arterial: {{product.charterial}}</p>
+          <p>Data de Criação: {{product.createdAt}}</p>
+          <!-- <img [src]="product.imageURL" class="card-img"> -->
+        </ion-label>
+        <ion-icon slot="start" icon="rocket" color="primary"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
