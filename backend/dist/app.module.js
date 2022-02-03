@@ -16,7 +16,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://rodrigo:hkp8uVaAog7tHz5s@cluster0.mywwp.mongodb.net/projeto?retryWrites=true&w=majority', {
+            mongoose_1.MongooseModule.forRoot('MongoDb URL here', {
                 useNewUrlParser: true,
                 useFindAndModify: false,
                 useCreateIndex: true
